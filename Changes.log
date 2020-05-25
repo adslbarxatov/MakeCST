@@ -1,0 +1,8 @@
+﻿Make CST changes log
+
+Version 1.5u:
+• Application namespace, icon and development environment have been unified;
+• Publication on GitHub
+
+Version 1.4
+• Added support for direct extraction of model's shape from DFF (not for all versions for now)
