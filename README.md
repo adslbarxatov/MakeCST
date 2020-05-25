@@ -6,6 +6,12 @@ A tool for converting DFF models and QHullOFF objects to GTA Vice city collision
 
 #
 
+Run the tool from command line without parameters for details
+
+Запустите инструмент из командной строки без параметров для получения подробной информации
+
+#
+
 Version 1.4 supports direct extraction of model's shape from DFF (not for all versions
 for now) and immediate creation of GTA Vice city CST script. But as so as before it is
 possible to generate CST from QHull OFF object that can be retrieved from DFF
