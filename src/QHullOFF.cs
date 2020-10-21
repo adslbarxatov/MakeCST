@@ -35,9 +35,9 @@ namespace RD_AAOW
 		private List<Triangle3D> extractedTriangles = new List<Triangle3D> ();
 
 		/// <summary>
-		/// Конструктор. Извлекает из файла DFF информацию о вершинах и треугольниках модели
+		/// Конструктор. Извлекает из файла QHullOFF информацию о вершинах и треугольниках модели
 		/// </summary>
-		/// <param name="SR">Открытый файловый поток DFF</param>
+		/// <param name="SR">Открытый файловый поток QHullOFF</param>
 		public QHullOFFReader (StreamReader SR)
 			{
 			// Переменные

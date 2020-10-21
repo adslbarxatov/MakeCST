@@ -1,14 +1,19 @@
 # MakeCST v 1.5u
+> PCC: 0000664193A563CD
+
 
 A tool for converting DFF models and QHullOFF objects to GTA Vice city collision scripts
 
 Инструмент для преобразования моделей DFF и объектов QHullOFF в скрипты столкновений GTA Vice city
+
 
 #
 
 Run the tool from command line without parameters for details
 
 Запустите инструмент из командной строки без параметров для получения подробной информации
+
+&nbsp;
 
 
 
@@ -22,6 +27,8 @@ possible to generate CST from QHull OFF object that can be retrieved from DFF
 и немедленное создание скрипта CST GTA Vice city. Но, как и раньше, можно генерировать
 CST из объекта QHull OFF, который можно получить из DFF
 
+&nbsp;
+
 
 
 ## Requirements / Требования
@@ -29,6 +36,8 @@ CST из объекта QHull OFF, который можно получить и
 Needs Windows XP and newer, Framework 4.0 and newer. Interface languages: en_us
 
 Требуется ОС Windows XP и новее, Framework 4.0 и новее. Языки интерфейса: en_us
+
+&nbsp;
 
 
 
@@ -39,6 +48,8 @@ describes general rules that we follow in all of our development processes, rele
 ideas.
 **It must be acquainted by participants and users before using any of laboratory's products.
 By downloading them, you agree to this Policy**
+
+#
 
 Данная [Политика (ADP)](https://vk.com/@rdaaow_fupl-adp), её положения, заключение, EULA и способы применения
 описывают общие правила, которым мы следуем во всех наших процессах разработки, вышедших в релиз приложениях

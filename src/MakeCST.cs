@@ -40,9 +40,6 @@ namespace RD_AAOW
 
 			// Определение версии файла
 			bool dff = args[0].ToLower ().EndsWith (DFFReader.MasterExtension);
-
-			//DFFReader dffr;
-			//QHullOFFReader qhoffr;
 			List<Triangle3D> triangles = new List<Triangle3D> ();
 
 			// Загрузка DFF
