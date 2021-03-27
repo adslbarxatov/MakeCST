@@ -1,5 +1,9 @@
 ﻿Make CST changes log
 
+Version 1.6:
+• Added ability to visually select input and output files (-v key);
+• New identity applied
+
 Version 1.5u:
 • Application namespace, icon and development environment have been unified;
 • Publication on GitHub

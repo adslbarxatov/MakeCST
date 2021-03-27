@@ -1,2 +1,3 @@
-_Changes for v 1.5u_:
-- 
+_Changes for v 1.6_:
+- Added ability to visually select input and output files (```-v``` key);
+- New identity applied

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 
 namespace RD_AAOW
 	{
@@ -9,37 +10,82 @@ namespace RD_AAOW
 	/// </summary>
 	public class MakeCollisionScriptProgram
 		{
-		// Главная функция
-		static void Main (string[] args)
+		/// <summary>
+		/// Точка входа приложения
+		/// </summary>
+		/// <param name="args">Аргументы командной строки</param>
+		[STAThread]
+		static public int Main (string[] args)
 			{
 			// Заголовок
 			Console.Title = ProgramDescription.AssemblyTitle;
 			Console.Write ("\n " + ProgramDescription.AssemblyDescription + " by " + ProgramDescription.AssemblyCompany + "\n\n");
 
 			// Проверка имени файла
+			bool visual = false;
 			if (args.Length != 1)
 				{
-				Console.Write (" \x10 Usage: " +
+				ShowMessage ("Usage: " +
 					ProgramDescription.AssemblyMainName + " <QHullOFF_FileName" + QHullOFFReader.MasterExtension +
 					">\n          or\n          " +
-					ProgramDescription.AssemblyMainName + " <DFF_FileName" + DFFReader.MasterExtension + ">\n\n");
-				return;
+					ProgramDescription.AssemblyMainName + " <DFF_FileName" + DFFReader.MasterExtension + ">", visual, false);
+				return 1;
+				}
+			else if (args[0].ToLower () == "-v")
+				{
+				visual = true;
+				}
+
+			// Запрос имён входного и выходного файлов, если требуется
+			string inFileName = args[0],
+				outFileName = Path.GetFileNameWithoutExtension (args[0]) + CSTWriter.MasterExtension2;
+			if (visual)
+				{
+				// Входной файл
+				OpenFileDialog ofd = new OpenFileDialog ();
+				ofd.CheckFileExists = ofd.CheckPathExists = true;
+				ofd.Filter = "DFF model|*" + DFFReader.MasterExtension +
+					"|QHullOFF script|*" + QHullOFFReader.MasterExtension;
+				ofd.Multiselect = false;
+				ofd.RestoreDirectory = true;
+				ofd.ShowHelp = ofd.ShowReadOnly = false;
+				ofd.Title = "Select model file";
+
+				if (ofd.ShowDialog () != DialogResult.OK)
+					return -1;
+				else
+					inFileName = ofd.FileName;
+
+				// Выходной файл
+				SaveFileDialog sfd = new SaveFileDialog ();
+				sfd.CreatePrompt = false;
+				sfd.FileName = Path.GetFileNameWithoutExtension (ofd.FileName);
+				sfd.Filter = "CST script|*" + CSTWriter.MasterExtension2;
+				sfd.OverwritePrompt = sfd.RestoreDirectory = true;
+				sfd.ShowHelp = false;
+				sfd.Title = "Select CST script file for creation";
+
+				if (sfd.ShowDialog () != DialogResult.OK)
+					return -2;
+				else
+					outFileName = sfd.FileName;
 				}
 
 			// Попытка открытия файла
 			FileStream FS = null;
 			try
 				{
-				FS = new FileStream (args[0], FileMode.Open);
+				FS = new FileStream (inFileName, FileMode.Open);
 				}
 			catch
 				{
-				Console.Write (" /x13 File \"" + args[0] + "\" is unavailable\n\n");
-				return;
+				//Console.Write (" /x13 File \"" + inFileName + "\" is unavailable\n\n");
+				ShowMessage ("File \"" + inFileName + "\" is unavailable", visual, true);
+				return -1;
 				}
 
 			// Определение версии файла
-			bool dff = args[0].ToLower ().EndsWith (DFFReader.MasterExtension);
+			bool dff = inFileName.ToLower ().EndsWith (DFFReader.MasterExtension);
 			List<Triangle3D> triangles = new List<Triangle3D> ();
 
 			// Загрузка DFF
@@ -51,8 +97,9 @@ namespace RD_AAOW
 
 				if (dffr.ExtractedPoints.Count == 0)
 					{
-					Console.Write (" /x13 File \"" + args[0] + "\": this version is unsupported or file is empty\n\n");
-					return;
+					//Console.Write (" /x13 File \"" + inFileName + "\": this version is unsupported or file is empty\n\n");
+					ShowMessage ("File \"" + inFileName + "\": this version is unsupported or file is empty", visual, true);
+					return -11;
 					}
 
 				for (int i = 0; i < dffr.ExtractedTriangles.Count; i++)
@@ -72,8 +119,9 @@ namespace RD_AAOW
 
 				if (qhoffr.ExtractedTriangles.Count == 0)
 					{
-					Console.Write (" /x13 File \"" + args[0] + "\" is unsupported or corrupted\n\n");
-					return;
+					//Console.Write (" /x13 File \"" + inFileName + "\" is unsupported or corrupted\n\n");
+					ShowMessage ("File \"" + inFileName + "\" is unsupported or corrupted", visual, true);
+					return -21;
 					}
 
 				for (int i = 0; i < qhoffr.ExtractedTriangles.Count; i++)
@@ -123,13 +171,26 @@ namespace RD_AAOW
 				}
 
 			// Запись файла
-			if (!CSTWriter.WriteCST (args[0], points, triangles))
+			if (!CSTWriter.WriteCST (outFileName, points, triangles))
 				{
-				Console.Write (" /x13 Cannot create file \"" + args[0] + CSTWriter.MasterExtension + "\"\n\n");
-				return;
+				//Console.Write (" /x13 Cannot create file \"" + outFileName + CSTWriter.MasterExtension + "\"\n\n");
+				ShowMessage ("Cannot create file \"" + outFileName + "\"", visual, true);
+				return -2;
 				}
 
-			Console.Write (" /x10 Conversion completed successfully\n\n");
+			//Console.Write (" /x10 Conversion completed successfully\n\n");
+			ShowMessage ("Conversion completed successfully", visual, false);
+			return 0;
+			}
+
+		// Метод отображает сообщение об ошибке или предупреждение
+		static private void ShowMessage (string Text, bool Visual, bool Error)
+			{
+			if (Visual)
+				MessageBox.Show (Text, ProgramDescription.AssemblyTitle, MessageBoxButtons.OK,
+					Error ? MessageBoxIcon.Exclamation : MessageBoxIcon.Information);
+			else
+				Console.Write ((Error ? " /x13 " : " /x10 ") + Text + "\n\n");
 			}
 		}
 	}

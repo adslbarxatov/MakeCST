@@ -17,7 +17,7 @@ namespace RD_AAOW
 		/// <summary>
 		/// Расширение формата файла
 		/// </summary>
-		public const string MasterExtension = "cst";
+		public const string MasterExtension2 = ".cst";
 
 		/// <summary>
 		/// Метод создаёт CST-скрипт по указанным точкам
@@ -44,7 +44,7 @@ namespace RD_AAOW
 			FileStream FS = null;
 			try
 				{
-				FS = new FileStream (FileName + MasterExtension, FileMode.Create);
+				FS = new FileStream (FileName, FileMode.Create);
 				}
 			catch
 				{
