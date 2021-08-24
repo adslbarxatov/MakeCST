@@ -1,3 +1,3 @@
-_Changes for v 1.6_:
-- Added ability to visually select input and output files (```-v``` key);
-- New identity applied
+_Changes for v 1.6.1_:
+- Fixed icon applied;
+- Added ability to visually select input and output files (```-v``` key)

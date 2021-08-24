@@ -1,5 +1,8 @@
 ﻿Make CST changes log
 
+Version 1.6.1:
+• Fixed icon applied
+
 Version 1.6:
 • Added ability to visually select input and output files (-v key);
 • New identity applied
