@@ -19,7 +19,7 @@ Run the tool from command line without parameters for details
 
 ## Features / Возможности
 
-Version 1.4 supports direct extraction of model's shape from DFF (not for all versions
+Version 1.4 supports direct extraction of model’s shape from DFF (not for all versions
 for now) and immediate creation of GTA Vice city CST script. But as so as before it is
 possible to generate CST from QHull OFF object that can be retrieved from DFF.
 Also ```-v``` key allows you to choose input and output files visually
@@ -47,13 +47,11 @@ Needs Windows XP and newer, Framework 4.0 and newer. Interface languages: en_us
 
 This Policy (ADP), its positions, conclusion, EULA and application methods
 describes general rules that we follow in all of our development processes, released applications and implemented ideas.
-**It must be acquainted by participants and users before using any of laboratory’s products.
-By downloading them, you agree and accept this Policy!**
-
-&nbsp;
+***It must be acquainted by participants and users before using any of laboratory’s products.
+By downloading them, you agree and accept this Policy!***
 
 Данная Политика (ADP), её положения, заключение, EULA и способы применения
 описывают общие правила, которым мы следуем во всех наших процессах разработки, вышедших в релиз приложениях
 и реализованных идеях.
-**Обязательна к ознакомлению для всех участников и пользователей перед использованием любого из продуктов лаборатории.
-Загружая их, вы соглашаетесь и принимаете эту Политику!**
+***Обязательна к ознакомлению для всех участников и пользователей перед использованием любого из продуктов лаборатории.
+Загружая их, вы соглашаетесь и принимаете эту Политику!***
