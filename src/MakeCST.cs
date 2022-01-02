@@ -19,7 +19,7 @@ namespace RD_AAOW
 			{
 			// Заголовок
 			Console.Title = ProgramDescription.AssemblyTitle;
-			Console.Write ("\n " + ProgramDescription.AssemblyDescription + " by " + ProgramDescription.AssemblyCompany + "\n\n");
+			Console.Write ("\n " + ProgramDescription.AssemblyDescription + "\n by " + RDGenerics.AssemblyCompany + "\n\n");
 
 			// Проверка имени файла
 			bool visual = false;
@@ -79,7 +79,6 @@ namespace RD_AAOW
 				}
 			catch
 				{
-				//Console.Write (" /x13 File \"" + inFileName + "\" is unavailable\n\n");
 				ShowMessage ("File \"" + inFileName + "\" is unavailable", visual, true);
 				return -1;
 				}
@@ -97,7 +96,6 @@ namespace RD_AAOW
 
 				if (dffr.ExtractedPoints.Count == 0)
 					{
-					//Console.Write (" /x13 File \"" + inFileName + "\": this version is unsupported or file is empty\n\n");
 					ShowMessage ("File \"" + inFileName + "\": this version is unsupported or file is empty", visual, true);
 					return -11;
 					}
@@ -119,7 +117,6 @@ namespace RD_AAOW
 
 				if (qhoffr.ExtractedTriangles.Count == 0)
 					{
-					//Console.Write (" /x13 File \"" + inFileName + "\" is unsupported or corrupted\n\n");
 					ShowMessage ("File \"" + inFileName + "\" is unsupported or corrupted", visual, true);
 					return -21;
 					}
@@ -173,12 +170,10 @@ namespace RD_AAOW
 			// Запись файла
 			if (!CSTWriter.WriteCST (outFileName, points, triangles))
 				{
-				//Console.Write (" /x13 Cannot create file \"" + outFileName + CSTWriter.MasterExtension + "\"\n\n");
 				ShowMessage ("Cannot create file \"" + outFileName + "\"", visual, true);
 				return -2;
 				}
 
-			//Console.Write (" /x10 Conversion completed successfully\n\n");
 			ShowMessage ("Conversion completed successfully", visual, false);
 			return 0;
 			}
