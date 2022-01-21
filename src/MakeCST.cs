@@ -185,7 +185,7 @@ namespace RD_AAOW
 				MessageBox.Show (Text, ProgramDescription.AssemblyTitle, MessageBoxButtons.OK,
 					Error ? MessageBoxIcon.Exclamation : MessageBoxIcon.Information);
 			else
-				Console.Write ((Error ? " /x13 " : " /x10 ") + Text + "\n\n");
+				Console.Write ((Error ? " \x13 " : " \x10 ") + Text + "\n\n");
 			}
 		}
 	}
