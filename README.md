@@ -22,12 +22,12 @@ Run the tool from command line without parameters for details
 Version 1.4 supports direct extraction of model’s shape from DFF (not for all versions
 for now) and immediate creation of GTA Vice city CST script. But as so as before it is
 possible to generate CST from QHull OFF object that can be retrieved from DFF.
-Also ```-v``` key allows you to choose input and output files visually
+Also `-v` key allows you to choose input and output files visually
 
 Версия 1.4 поддерживает прямое извлечение формы модели из DFF (пока не для всех версий)
 и немедленное создание скрипта CST GTA Vice city. Но, как и раньше, можно генерировать
 CST из объекта QHull OFF, который можно получить из DFF.
-Кроме того, ключ ```-v``` позволяет выбирать входной и выходной файлы визуально
+Кроме того, ключ `-v` позволяет выбирать входной и выходной файлы визуально
 
 &nbsp;
 
@@ -36,7 +36,7 @@ CST из объекта QHull OFF, который можно получить и
 ## Requirements / Требования
 
 - Windows XP or newer / или новее;
-- [Microsoft .NET Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=17718).
+- [Microsoft .NET Framework 4.0](https://microsoft.com/en-us/download/details.aspx?id=17718).
 
 Interface languages / языки интерфейса: en_us.
 
@@ -44,7 +44,7 @@ Interface languages / языки интерфейса: en_us.
 
 
 
-## [Development policy and EULA / Политика разработки и EULA](https://adslbarxatov.github.io/ADP)
+## [Development policy and EULA](https://adslbarxatov.github.io/ADP) / [Политика разработки и EULA](https://adslbarxatov.github.io/ADP/ru)
 
 This Policy (ADP), its positions, conclusion, EULA and application methods
 describes general rules that we follow in all of our development processes, released applications and implemented ideas.
