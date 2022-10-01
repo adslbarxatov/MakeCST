@@ -1,2 +1,2 @@
-_Changes for v 1.6.37_:
-- Current updates applied
+_Changes for v 2.0_:
+- Required framework version updated from 4.0 to 4.8

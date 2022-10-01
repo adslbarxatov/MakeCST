@@ -1,5 +1,5 @@
-# MakeCST v 1.6.37
-> PCC: 000117CC435AC57C
+# MakeCST v 2.0
+> PCC: 00012BC6718B07C8
 
 
 A tool for converting DFF models and QHullOFF objects to GTA Vice city collision scripts
@@ -35,8 +35,8 @@ CST из объекта QHull OFF, который можно получить и
 
 ## Requirements / Требования
 
-- Windows XP or newer / или новее;
-- [Microsoft .NET Framework 4.0](https://microsoft.com/en-us/download/details.aspx?id=17718).
+- Windows 7 or newer / или новее;
+- [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631).
 
 Interface languages / языки интерфейса: en_us.
 
