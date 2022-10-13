@@ -1,5 +1,5 @@
-# MakeCST v 2.0
-> PCC: 00012BC6718B07C8
+# MakeCST v 2.0.2
+> PCC: 000147BF05736D2B
 
 
 A tool for converting DFF models and QHullOFF objects to GTA Vice city collision scripts
