@@ -1,5 +1,9 @@
 ﻿Make CST changes log
 
+Version 2.0.7:
+• Updated the XPR (XPUN) mechanics;
+• Removed some redundant code
+
 Version 2.0.2:
 • XPR control has been implemented;
 • Adjusted the control of single active copy

@@ -18,27 +18,31 @@ namespace RD_AAOW
 		static public int Main (string[] args)
 			{
 			// Язык интерфейса и контроль XPR
-			SupportedLanguages al = Localization.CurrentLanguage;
-			if (!Localization.IsXPRClassAcceptable)
-				return -21;
+			/*SupportedLanguages al = Localization.CurrentLanguage;
 
 			// Проверка запуска единственной копии
 			if (!RDGenerics.IsThisInstanceUnique (al == SupportedLanguages.ru_ru))
-				return -22;
+				return -22;*/
 
 			// Заголовок
 			Console.Title = ProgramDescription.AssemblyTitle;
-			Console.Write ("\n " + ProgramDescription.AssemblyDescription + 
-				"\n by " + RDGenerics.AssemblyCompany + "\n\n");
+			Console.Write ("\n " + ProgramDescription.AssemblyDescription +
+				"\n by RD AAOW Free development lab\n\n");
 
 			// Проверка имени файла
 			bool visual = false;
+			if (!Localization.IsXPUNClassAcceptable)
+				{
+				ShowMessage (Localization.InacceptableXPUNClassMessage, visual, true);
+				return -21;
+				}
+
 			if (args.Length != 1)
 				{
 				ShowMessage ("Usage: " +
 					ProgramDescription.AssemblyMainName + " <QHullOFF_FileName" + QHullOFFReader.MasterExtension +
 					">\n          or\n          " +
-					ProgramDescription.AssemblyMainName + " <DFF_FileName" + DFFReader.MasterExtension + ">", 
+					ProgramDescription.AssemblyMainName + " <DFF_FileName" + DFFReader.MasterExtension + ">",
 					visual, false);
 				return 1;
 				}
@@ -107,7 +111,7 @@ namespace RD_AAOW
 
 				if (dffr.ExtractedPoints.Count == 0)
 					{
-					ShowMessage ("File \"" + inFileName + "\": this version is unsupported or file is empty", 
+					ShowMessage ("File \"" + inFileName + "\": this version is unsupported or file is empty",
 						visual, true);
 					return -11;
 					}
