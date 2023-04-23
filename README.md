@@ -5,15 +5,15 @@
 
 A tool for converting DFF models and QHullOFF objects to GTA Vice city collision scripts.
 
-:warning: This project is now a part of the [Vice city toolset](https://adslbarxatov.github.io/ViceCityToolset) app.
-This repository is no longer updated
+:warning: ***This project is now a part of the [Vice city toolset](https://adslbarxatov.github.io/ViceCityToolset) app.
+This repository is no longer updated***
 
 ---
 
 Инструмент для преобразования моделей DFF и объектов QHullOFF в скрипты столкновений GTA Vice city.
 
-:warning: Проект теперь является частью приложения [Vice city toolset](https://adslbarxatov.github.io/ViceCityToolset/ru).
-Данный репозиторий более не обновляется
+:warning: ***Проект теперь является частью приложения [Vice city toolset](https://adslbarxatov.github.io/ViceCityToolset/ru).
+Данный репозиторий более не обновляется***
 
 &nbsp;
 
