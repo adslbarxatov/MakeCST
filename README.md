@@ -1,45 +1,19 @@
 # MakeCST v 2.0.7
 > PCC: 000125D33C025F86
 
+---
 
+A tool for converting DFF models and QHullOFF objects to GTA Vice city collision scripts.
 
-A tool for converting DFF models and QHullOFF objects to GTA Vice city collision scripts
+:warning: This project is now a part of the [Vice city toolset](https://adslbarxatov.github.io/ViceCityToolset) app.
+This repository is no longer updated
 
-Инструмент для преобразования моделей DFF и объектов QHullOFF в скрипты столкновений GTA Vice city
+---
 
+Инструмент для преобразования моделей DFF и объектов QHullOFF в скрипты столкновений GTA Vice city.
 
-#
-
-Run the tool from command line without parameters for details
-
-Запустите инструмент из командной строки без параметров для получения подробной информации
-
-&nbsp;
-
-
-
-## Features / Возможности
-
-Version 1.4 supports direct extraction of model’s shape from DFF (not for all versions
-for now) and immediate creation of GTA Vice city CST script. But as so as before it is
-possible to generate CST from QHull OFF object that can be retrieved from DFF.
-Also `-v` key allows you to choose input and output files visually
-
-Версия 1.4 поддерживает прямое извлечение формы модели из DFF (пока не для всех версий)
-и немедленное создание скрипта CST GTA Vice city. Но, как и раньше, можно генерировать
-CST из объекта QHull OFF, который можно получить из DFF.
-Кроме того, ключ `-v` позволяет выбирать входной и выходной файлы визуально
-
-&nbsp;
-
-
-
-## Requirements / Требования
-
-- Windows 7 or newer / или новее;
-- [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631).
-
-Interface languages / языки интерфейса: en_us.
+:warning: Проект теперь является частью приложения [Vice city toolset](https://adslbarxatov.github.io/ViceCityToolset/ru).
+Данный репозиторий более не обновляется
 
 &nbsp;
 
